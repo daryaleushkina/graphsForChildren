@@ -314,7 +314,6 @@
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Курсовая работа Аврааменко Алексей 411 группа";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

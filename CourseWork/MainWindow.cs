@@ -136,10 +136,6 @@ namespace CourseWork
             return false;
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void Send1_Click(object sender, EventArgs e)
         {
@@ -163,28 +159,6 @@ namespace CourseWork
             Send1.Hide();
             pictureBox2.Show();
 
-        }
-
-        private void Send2_Click(object sender, EventArgs e)
-        {
-            if (textBoxForTask.Text == "8")
-            {
-                MessageBox.Show("Верно! Ты молодец!");
-                points += 25;
-                labelForPoints.Text = "Количество баллов: " + points.ToString();
-
-            }
-            else MessageBox.Show("Не верно, правильный ответ 8", "Переход к следующему вопросу");
-            labelForTheory.Text = "Взвешенный граф — граф, каждому ребру которого поставлено \nв соответствие некое значение(вес ребра) \nВес любого пути будем называть длиной  этого пути. Ясно, \nчто между двумя вершинами существует такой путь, который\nимеет минимальную возможную длину. Эта длина и называется \nрасстоянием между двумя вершинами. Путь, который эту длину\nреализует, естественно, называется кратчайшим.";
-            labelForTheory.Show();
-            labelForTask.Text = "Между населёнными пунктами A, B, C, D, E, F построены дороги,  \nпротяжённость которых(в километрах) изображена на рёбрах. \nОпределите длину кратчайшего пути между пунктами B и C.\nПередвигаться можно только по дорогам.";
-            labelForTask.Hide();
-            groupBox1.Hide();
-            textBoxForTask.Clear();
-            textBoxForTask.Hide();
-            Send2.Hide();
-            pictureBox3.Show();
-            goToThirdTask.Show();
         }
 
         private void GoToSecondTask_Click(object sender, EventArgs e)
@@ -218,6 +192,29 @@ namespace CourseWork
 
             ShowInfoAboutGraph(ref graph2, ref gViewer);
         }
+
+        private void Send2_Click(object sender, EventArgs e)
+        {
+            if (textBoxForTask.Text == "8")
+            {
+                MessageBox.Show("Верно! Ты молодец!", "Переход к следующему вопросу");
+                points += 25;
+                labelForPoints.Text = "Количество баллов: " + points.ToString();
+
+            }
+            else MessageBox.Show("Не верно, правильный ответ 8", "Переход к следующему вопросу");
+            labelForTheory.Text = "Взвешенный граф — граф, каждому ребру которого поставлено \nв соответствие некое значение(вес ребра) \nВес любого пути будем называть длиной  этого пути. Ясно, \nчто между двумя вершинами существует такой путь, который\nимеет минимальную возможную длину. Эта длина и называется \nрасстоянием между двумя вершинами. Путь, который эту длину\nреализует, естественно, называется кратчайшим.";
+            labelForTheory.Show();
+            labelForTask.Text = "Между населёнными пунктами A, B, C, D, E, F построены дороги,  \nпротяжённость которых(в километрах) изображена на рёбрах. \nОпределите длину кратчайшего пути между пунктами B и C.\nПередвигаться можно только по дорогам.";
+            labelForTask.Hide();
+            groupBox1.Hide();
+            textBoxForTask.Clear();
+            textBoxForTask.Hide();
+            Send2.Hide();
+            pictureBox3.Show();
+            goToThirdTask.Show();
+        }
+
 
         private void GoToThirdTask_Click(object sender, EventArgs e)
         {
@@ -264,7 +261,7 @@ namespace CourseWork
         {
             if (textBoxForTask.Text == "9")
             {
-                MessageBox.Show("Отлично! Давай дальше!");
+                MessageBox.Show("Отлично! Давай дальше!", "Переход к следующему вопросу");
                 points += 25;
                 labelForPoints.Text = "Количество баллов: " + points.ToString();
 
@@ -306,9 +303,22 @@ namespace CourseWork
 
             int k = 0;
             int[] binTree = { 100, 70, 150, 50, 90, 200, 55, 10, 170, 210, 60, 58, 65 };
+
+            foreach (Edge item in graph4.Edges)
+            {
+                item.Attr.ArrowheadAtTarget = ArrowStyle.None;
+                k++;
+
+            }
+            k = 0;
             foreach (Node item in graph4.Nodes)
             {
                 item.LabelText = binTree[k].ToString();
+                if (binTree[k] == 50)
+                {
+                    item.Attr.Color = Color.Red;
+                    item.Attr.FillColor = Color.Red;
+                }
                 k++;
                 item.Attr.XRadius = 130;
                 item.Attr.YRadius = 130;
