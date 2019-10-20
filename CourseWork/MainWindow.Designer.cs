@@ -36,7 +36,7 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelForTheory = new System.Windows.Forms.Label();
             this.labelForNode = new System.Windows.Forms.Label();
             this.labelForEdge = new System.Windows.Forms.Label();
             this.textBoxForNode = new System.Windows.Forms.TextBox();
@@ -44,13 +44,21 @@
             this.Send1 = new System.Windows.Forms.Button();
             this.labelForPoints = new System.Windows.Forms.Label();
             this.Send2 = new System.Windows.Forms.Button();
-            this.labelForCountCity = new System.Windows.Forms.Label();
-            this.textBoxCountPoint = new System.Windows.Forms.TextBox();
+            this.labelForTask = new System.Windows.Forms.Label();
+            this.textBoxForTask = new System.Windows.Forms.TextBox();
             this.goToSecondTask = new System.Windows.Forms.Button();
+            this.goToThirdTask = new System.Windows.Forms.Button();
+            this.Send3 = new System.Windows.Forms.Button();
+            this.goToTask4 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Send4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +72,7 @@
             this.goToFirstTask.TabIndex = 0;
             this.goToFirstTask.Text = "Решить 1 задание";
             this.goToFirstTask.UseVisualStyleBackColor = true;
-            this.goToFirstTask.Click += new System.EventHandler(this.BtnOpenFile_Click);
+            this.goToFirstTask.Click += new System.EventHandler(this.goToFirstTask_Click);
             // 
             // groupBox1
             // 
@@ -96,14 +104,14 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label1
+            // labelForTheory
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(534, 119);
-            this.label1.TabIndex = 6;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.labelForTheory.AutoSize = true;
+            this.labelForTheory.Location = new System.Drawing.Point(12, 22);
+            this.labelForTheory.Name = "labelForTheory";
+            this.labelForTheory.Size = new System.Drawing.Size(520, 221);
+            this.labelForTheory.TabIndex = 6;
+            this.labelForTheory.Text = resources.GetString("labelForTheory.Text");
             // 
             // labelForNode
             // 
@@ -166,21 +174,21 @@
             this.Send2.UseVisualStyleBackColor = true;
             this.Send2.Click += new System.EventHandler(this.Send2_Click);
             // 
-            // labelForCountCity
+            // labelForTask
             // 
-            this.labelForCountCity.AutoSize = true;
-            this.labelForCountCity.Location = new System.Drawing.Point(12, 176);
-            this.labelForCountCity.Name = "labelForCountCity";
-            this.labelForCountCity.Size = new System.Drawing.Size(250, 17);
-            this.labelForCountCity.TabIndex = 15;
-            this.labelForCountCity.Text = "Сколько путей из города A в город Б";
+            this.labelForTask.AutoSize = true;
+            this.labelForTask.Location = new System.Drawing.Point(12, 176);
+            this.labelForTask.Name = "labelForTask";
+            this.labelForTask.Size = new System.Drawing.Size(250, 17);
+            this.labelForTask.TabIndex = 15;
+            this.labelForTask.Text = "Сколько путей из города A в город Б";
             // 
-            // textBoxCountPoint
+            // textBoxForTask
             // 
-            this.textBoxCountPoint.Location = new System.Drawing.Point(15, 250);
-            this.textBoxCountPoint.Name = "textBoxCountPoint";
-            this.textBoxCountPoint.Size = new System.Drawing.Size(36, 22);
-            this.textBoxCountPoint.TabIndex = 16;
+            this.textBoxForTask.Location = new System.Drawing.Point(15, 250);
+            this.textBoxForTask.Name = "textBoxForTask";
+            this.textBoxForTask.Size = new System.Drawing.Size(36, 22);
+            this.textBoxForTask.TabIndex = 16;
             // 
             // goToSecondTask
             // 
@@ -192,6 +200,58 @@
             this.goToSecondTask.Text = "Решить 2 задание";
             this.goToSecondTask.UseVisualStyleBackColor = true;
             this.goToSecondTask.Click += new System.EventHandler(this.GoToSecondTask_Click);
+            // 
+            // goToThirdTask
+            // 
+            this.goToThirdTask.Location = new System.Drawing.Point(19, 257);
+            this.goToThirdTask.Margin = new System.Windows.Forms.Padding(4);
+            this.goToThirdTask.Name = "goToThirdTask";
+            this.goToThirdTask.Size = new System.Drawing.Size(212, 28);
+            this.goToThirdTask.TabIndex = 19;
+            this.goToThirdTask.Text = "Решить 3 задание";
+            this.goToThirdTask.UseVisualStyleBackColor = true;
+            this.goToThirdTask.Click += new System.EventHandler(this.GoToThirdTask_Click);
+            // 
+            // Send3
+            // 
+            this.Send3.Location = new System.Drawing.Point(12, 280);
+            this.Send3.Name = "Send3";
+            this.Send3.Size = new System.Drawing.Size(219, 31);
+            this.Send3.TabIndex = 21;
+            this.Send3.Text = "Отправить решение";
+            this.Send3.UseVisualStyleBackColor = true;
+            this.Send3.Click += new System.EventHandler(this.Send3_Click);
+            // 
+            // goToTask4
+            // 
+            this.goToTask4.Location = new System.Drawing.Point(19, 257);
+            this.goToTask4.Margin = new System.Windows.Forms.Padding(4);
+            this.goToTask4.Name = "goToTask4";
+            this.goToTask4.Size = new System.Drawing.Size(212, 28);
+            this.goToTask4.TabIndex = 22;
+            this.goToTask4.Text = "Решить 4 задание";
+            this.goToTask4.UseVisualStyleBackColor = true;
+            this.goToTask4.Click += new System.EventHandler(this.GoToTask4_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::CourseWork.Properties.Resources.binTree;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 338);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(335, 302);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 23;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CourseWork.Properties.Resources.graph;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 368);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(335, 302);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -213,26 +273,42 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
+            // Send4
+            // 
+            this.Send4.Location = new System.Drawing.Point(12, 281);
+            this.Send4.Name = "Send4";
+            this.Send4.Size = new System.Drawing.Size(219, 31);
+            this.Send4.TabIndex = 24;
+            this.Send4.Text = "Отправить решение";
+            this.Send4.UseVisualStyleBackColor = true;
+            this.Send4.Click += new System.EventHandler(this.Send4_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1550, 1037);
-            this.Controls.Add(this.textBoxCountPoint);
-            this.Controls.Add(this.labelForCountCity);
+            this.Controls.Add(this.textBoxForTask);
+            this.Controls.Add(this.labelForTask);
             this.Controls.Add(this.labelForNode);
-            this.Controls.Add(this.Send2);
             this.Controls.Add(this.labelForPoints);
-            this.Controls.Add(this.Send1);
             this.Controls.Add(this.textBoxForEdge);
             this.Controls.Add(this.textBoxForNode);
             this.Controls.Add(this.labelForEdge);
-            this.Controls.Add(this.goToFirstTask);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelForTheory);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.goToTask4);
+            this.Controls.Add(this.goToThirdTask);
             this.Controls.Add(this.goToSecondTask);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.Send4);
+            this.Controls.Add(this.Send3);
+            this.Controls.Add(this.Send2);
+            this.Controls.Add(this.Send1);
+            this.Controls.Add(this.goToFirstTask);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -241,6 +317,8 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -256,7 +334,7 @@
         private System.Windows.Forms.Panel task;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelForTheory;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBoxForEdge;
         private System.Windows.Forms.TextBox textBoxForNode;
@@ -265,10 +343,17 @@
         private System.Windows.Forms.Button Send1;
         private System.Windows.Forms.Label labelForPoints;
         private System.Windows.Forms.Button Send2;
-        private System.Windows.Forms.Label labelForCountCity;
-        private System.Windows.Forms.TextBox textBoxCountPoint;
+        private System.Windows.Forms.Label labelForTask;
+        private System.Windows.Forms.TextBox textBoxForTask;
         private System.Windows.Forms.Button goToSecondTask;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button goToThirdTask;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button Send3;
+        private System.Windows.Forms.Button goToTask4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button Send4;
     }
 }
 

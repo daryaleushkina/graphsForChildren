@@ -100,5 +100,11 @@
   <ItemGroup>
     <None Include="Properties\Pushkin.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\binTree.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

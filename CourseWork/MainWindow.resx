@@ -126,7 +126,7 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="labelForTheory.Text" xml:space="preserve">
     <value>Графы возникли в 18 веке, когда известный математик Леонард Эйлер 
  пытался решить теперь уже классическую задачу о Кёнигсбергских мостах. 
  Важным классом графов являются деревья. Мы познакомимся 
